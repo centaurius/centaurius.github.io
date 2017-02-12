@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     page
 title:      "HaveUReddit?  A chrome extension made at HackBU 2016"
 subtitle:   "Discover what's trending on reddit with our wordcloud and data analytics chrome extension."
 date:       2016-02-13 20:17:35

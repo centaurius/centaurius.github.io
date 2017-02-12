@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     page
 title:      "Centaurius Blog"
 subtitle:   "Let's Develop, Create Music and Explore Great Things Together!"
 date:       2016-02-05 19:41:39
