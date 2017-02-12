@@ -4,7 +4,8 @@ title:      "Russel Athletic Bowl"
 subtitle:   "The Few. The Proud. The Tangerines!"
 date:       2016-02-06 23:09:27
 author:     "Jo D. Arias"
-header-img: "img/tangerines-background.jpg"
+header-img: "images/tangerines-background.jpg"
+published: false
 ---
 <h1 class="section-heading">What Tangerines?</h1>
 

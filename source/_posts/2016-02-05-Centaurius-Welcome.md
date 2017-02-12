@@ -4,7 +4,8 @@ title:      "Centaurius Blog"
 subtitle:   "Let's Develop, Create Music and Explore Great Things Together!"
 date:       2016-02-05 19:41:39
 author:     "Centaurius"
-header-img: "img/welcome.jpg"
+header-img: "images/welcome.jpg"
+published: true
 ---
 <h2 class="section-heading">Welcome</h2>
 <p>As an engineering student who's always on the go, life can be busy!  However, I would like to share my love of music, program development, and advances in engineering with the world, and you can find all sorts of content on here. </p>
