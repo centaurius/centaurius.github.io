@@ -12,7 +12,7 @@ published: true
 <meta name="keywords" content="Python,Brython">
 <meta name="author" content="Pierre Quentel">
 <meta charset="iso-8859-1">
-<script type="text/javascript" src="../src/brython.js"></script>
+<script type="text/javascript" src="javascripts/brython.js"></script>
 </head>
 
 <body onload="brython()">
