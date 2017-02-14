@@ -25,7 +25,7 @@ def echo(*args):
 
 doc["test"].bind("click", echo)
 </script>
-<p>Your name is : <input id="zone"><button id="test">click!</button>
+<p>Your name is: <input id="zone"><button id="test">click!</button>
 </body>
 
 </html>
