@@ -4,7 +4,7 @@
   <title><![CDATA[Centaurius Blog]]></title>
   <link href="http://centaurius.github.io/atom.xml" rel="self"/>
   <link href="http://centaurius.github.io/"/>
-  <updated>2017-02-14T19:07:56+00:00</updated>
+  <updated>2017-02-14T19:11:13+00:00</updated>
   <id>http://centaurius.github.io/</id>
   <author>
     <name><![CDATA[Hamilton Andrew White]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Centaurius Blog Welcome!]]></title>
-    <link href="http://centaurius.github.io/blog/2017/02/13/centaurius-blog-welcome/"/>
+    <link href="http://centaurius.github.io/blog/2017/02/13/centaurius-blog-welcome.html"/>
     <updated>2017-02-13T21:59:19+00:00</updated>
     <id>http://centaurius.github.io/blog/2017/02/13/centaurius-blog-welcome</id>
     <content type="html"><![CDATA[<h2 class="section-heading">Welcome</h2>
