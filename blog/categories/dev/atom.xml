@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Centaurius Blog]]></title>
-  <link href="http://centaurius.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Dev, | Centaurius Blog]]></title>
+  <link href="http://centaurius.github.io/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://centaurius.github.io/"/>
   <updated>2017-02-14T14:13:30+00:00</updated>
   <id>http://centaurius.github.io/</id>
