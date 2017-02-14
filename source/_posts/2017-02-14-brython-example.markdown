@@ -6,133 +6,149 @@ comments: true
 categories: [python, coding]
 published: true
 ---
-
-<!doctype html>
 <html>
 <head>
-<meta name="description" content="Analog clock demo written in Brython www.brython.info">
-<meta name="keywords" content="Python,Brython">
-<meta name="author" content="Pierre Quentel">
 <meta charset="iso-8859-1">
-<script type="text/javascript" src="/src/brython.js"></script>
-<script type="text/javascript" src="/src/py_VFS.js"></script>
 
-</head>
-
-<body onLoad="brython(1)">
-<img src="../brython.png">
-<p>
+<script type="text/javascript" src="../src/brython.js"></script>
 
 <script type="text/python">
-import time
 import math
-import datetime
 
 from browser import document as doc
-import browser.timer
+import browser.html as html
+import browser.svg as svg
 
-sin,cos = math.sin,math.cos
-width,height = 250,250 # canvas dimensions
-ray = 100 # clock ray
+ray = 100
+values = [20,10,30,15,25]
 
-def needle(angle,r1,r2,color="#000000"):
-    # draw a needle at specified angle in specified color
-    # r1 and r2 are percentages of clock ray
-    x1 = width/2-ray*cos(angle)*r1
-    y1 = height/2-ray*sin(angle)*r1
-    x2 = width/2+ray*cos(angle)*r2
-    y2 = height/2+ray*sin(angle)*r2
-    ctx.beginPath()
-    ctx.strokeStyle = color
-    ctx.moveTo(x1,y1)
-    ctx.lineTo(x2,y2)
-    ctx.stroke()
+colors = ["C8E0A2","A6BED1","E4CC85","D7D7D7","90AF97","698EA8",
+        "BFA166","A8ADB0","FF6600"]
 
-def set_clock():
-    # erase clock
-    ctx.beginPath()
-    ctx.fillStyle = "#FFF"
-    ctx.arc(width/2,height/2,ray*0.89,0,2*math.pi)
-    ctx.fill()
+panel = doc["panel"]
+legend = None
+print(svg.text)
+title = svg.text('',x=150,y=25,
+    font_size=22,text_anchor="middle",
+    style={"stroke":"black"})
+panel <= title
+
+paths = {}
+
+def pie_chart():
+    global paths,legend
+    # clear SVG doc
+    for child in panel: # iteration on child nodes
+        if child != title:
+            panel.removeChild(child)
+
+    # zone for legend
+    legend = svg.text('',x=350,y=150,
+        font_size=20,text_anchor="middle",
+        style={"stroke":"black"})
+    panel <= legend
+
+    set_title()
+        
+    paths = {}
+    data = {}
+    for i,cell in enumerate(cells):
+        data['Item %s' %(i+1)]=float(cell.text)
+    style={"fill-opacity": 1,"stroke":"black","stroke-width": 1}
+    width = 3.8*ray
+    height = 2.2*ray
+    x_center = 150
+    y_center = 160
+    x = x_center
+    y = y_center-ray
+    total = sum(data.values())
+    items = list(data.items())
+    cumul = 0
+    for i,(key,value) in enumerate(items):
+        angle1 = 2*math.pi*cumul
+        cumul += float(value)/total
+        angle = 2*math.pi*cumul
+        x_end = x_center + ray*math.cos((math.pi/2)-angle)
+        y_end = y_center - ray*math.sin((math.pi/2)-angle)
+        path = "M%s,%s " %(x_center,y_center)
+        path += "L%s,%s " %(int(x),int(y))
+        if angle-angle1 <= math.pi:
+            path += "A%s,%s 0 0,1 " %(ray,ray)
+        else:
+            path += "A%s,%s 0 1,1 " %(ray,ray)
+        path += "%s,%s z" %(int(x_end),int(y_end))
+        x,y = x_end,y_end
+        color = colors[i % len(colors)]
+        style["fill"]='#'+color
+        path = svg.path(d=path,style=style)
+        path.bind('mouseover',lambda ev,key=key:show_legend(key))
+        path.bind('mouseout',lambda ev:hide_legend)
+        panel <= path
+        paths[key]=path
+
+def set_title(*args):
+    title.text = title_input.value
     
-    # redraw hours
-    show_hours()
+def show_legend(key):
+    legend.text = key
 
-    # print day
-    now = datetime.datetime.now()
-    day = now.day
-    ctx.font = "bold 14px Arial"
-    ctx.textAlign = "center"
-    ctx.textBaseline = "middle"
-    ctx.fillStyle="#FFF"
-    ctx.fillText(day,width*0.7,height*0.5)
+def hide_legend(ev):
+    legend.text = ''
 
-    # draw needles for hour, minute, seconds    
-    ctx.lineWidth = 3
-    hour = now.hour%12 + now.minute/60
-    angle = hour*2*math.pi/12 - math.pi/2
-    needle(angle,0.05,0.5)
-    minute = now.minute
-    angle = minute*2*math.pi/60 - math.pi/2
-    needle(angle,0.05,0.85)
-    ctx.lineWidth = 1
-    second = now.second+now.microsecond/1000000
-    angle = second*2*math.pi/60 - math.pi/2
-    needle(angle,0.05,0.85,"#FF0000") # in red
-    
-browser.timer.set_interval(set_clock,100)
+def change(rank,offset):
+    x = int(cells[int(rank)].text)
+    if x+int(offset)>=0:
+        cells[int(rank)].text = x+int(offset)
+        pie_chart()
 
-canvas = doc["clock"]
+nb_cols = 2
+nb_lines = 5
 
-# draw clock border
-ctx = canvas.getContext("2d")
-ctx.beginPath()
-ctx.lineWidth = 10
-ctx.arc(width/2,height/2,ray,0,2*math.pi)
-ctx.stroke()
+t = html.TABLE()
+tb = html.TBODY()
+cells = []
 
-for i in range(60):
-    ctx.lineWidth = 1
-    if i%5 == 0:
-        ctx.lineWidth = 3
-    angle = i*2*math.pi/60 - math.pi/3
-    x1 = width/2+ray*cos(angle)
-    y1 = height/2+ray*sin(angle)
-    x2 = width/2+ray*cos(angle)*0.9
-    y2 = height/2+ray*sin(angle)*0.9
-    ctx.beginPath()
-    ctx.moveTo(x1,y1)
-    ctx.lineTo(x2,y2)
-    ctx.stroke()
+title_input = html.INPUT(value='Pie Chart')
+title_input.bind('change',set_title)
+tb <= html.TD('Title')+html.TD(title_input,colspan=3)
 
-def show_hours():
-    ctx.beginPath()
-    ctx.arc(width/2,height/2,ray*0.05,0,2*math.pi)
-    ctx.fillStyle = "#000"
-    ctx.fill()
-    for i in range(1,13):
-        angle = i*math.pi/6-math.pi/2
-        x3 = width/2+ray*cos(angle)*0.75
-        y3 = height/2+ray*sin(angle)*0.75
-        ctx.font = "20px Arial"
-        ctx.textAlign = "center"
-        ctx.textBaseline = "middle"
-        ctx.fillText(i,x3,y3)
-    # cell for day
-    ctx.fillStyle = "#000"
-    ctx.fillRect(width*0.65,height*0.47,width*0.1,height*0.06)
+for i in range(nb_lines):
+    row = html.TR()
+    row <= html.TD('Item %s' %(i+1))
+    b_down = html.BUTTON('<')
+    b_down.bind('click',lambda ev,x=i:change(x,-1))
+    row <= html.TD(b_down)
+    cell = html.SPAN(values[i])
+    row <= html.TD(cell)
+    b_up = html.BUTTON('>')
+    b_up.bind('click',lambda ev,x=i:change(x,1))
+    row <= html.TD(b_up)
+    cells.append(cell)
+    tb <= row
+t <= tb
+doc['data'] <= t
 
-show_hours()
-set_clock()
+pie_chart()
 </script>
 
+</head>
+<body onLoad="brython(2)">
+<h1>SVG pie chart</h1>
 <p>
-<canvas width="250" height="250" id="clock">
-Your browser doesn't support Canvas
-</canvas>
+
+<table>
+<tr>
+<td id="data"></td>
+<td>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    width="400" height="300" style="border-style:solid;border-width:1;border-color:#000;">
+  <g id="panel">
+  </g>
+</svg>
+</td>
+</tr>
+</table>
+
 
 </body>
-</html> 
-
-
-
+</html>
