@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Coding | Centaurius Blog]]></title>
   <link href="http://centaurius.github.io/:blog/:categories/coding/atom.xml" rel="self"/>
   <link href="http://centaurius.github.io/"/>
-  <updated>2017-02-14T20:00:30+00:00</updated>
+  <updated>2017-02-14T20:03:31+00:00</updated>
   <id>http://centaurius.github.io/</id>
   <author>
     <name><![CDATA[Hamilton Andrew White]]></name>
@@ -22,7 +22,7 @@
 <head>
 <meta charset="iso-8859-1"></p>
 
-<script type="text/javascript" src="../src/brython.js"></script>
+<script type="text/javascript" src="brython-3.3.1/brython.js"></script>
 
 
 
