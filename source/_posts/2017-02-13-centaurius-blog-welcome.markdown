@@ -3,10 +3,13 @@ layout: post
 title: "Centaurius Blog Welcome!"
 date: 2017-02-13 21:59:19 +0000
 comments: true
-categories: 
+categories: dev, welcome
+published: true
 ---
 <h2 class="section-heading">Welcome</h2>
 <p>As an engineering student who's always on the go, life can be busy!  However, I would like to share my love of music, program development, and advances in engineering with the world, and you can find all sorts of content on here. </p>
+
+<!-- more -->
 
 <h2 class="section-heading">Development</h2>
 
