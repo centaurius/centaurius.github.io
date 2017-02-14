@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Centaurius Blog]]></title>
-  <link href="http://centaurius.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Python | Centaurius Blog]]></title>
+  <link href="http://centaurius.github.io/:blog/:categories/python/atom.xml" rel="self"/>
   <link href="http://centaurius.github.io/"/>
   <updated>2017-02-14T19:39:42+00:00</updated>
   <id>http://centaurius.github.io/</id>
@@ -151,54 +151,6 @@ Your browser doesn&rsquo;t support Canvas
 
 <p></body>
 </html></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Centaurius Blog Welcome!]]></title>
-    <link href="http://centaurius.github.io/:blog/2017/02/13/centaurius-blog-welcome.html"/>
-    <updated>2017-02-13T21:59:19+00:00</updated>
-    <id>http://centaurius.github.io/:blog/2017/02/13/centaurius-blog-welcome</id>
-    <content type="html"><![CDATA[<h2 class="section-heading">Welcome</h2>
-
-
-<p>As an engineering student who's always on the go, life can be busy!  However, I would like to share my love of music, program development, and advances in engineering with the world, and you can find all sorts of content on here. </p>
-
-
-
-
-<!-- more -->
-
-
-
-
-<h2 class="section-heading">Development</h2>
-
-
-
-
-<p>On the development side of things, this site will be the hub of all of my creations and findings. On of my great hobbies is going to hackathons and designing radical new apps.  Some of them are linked on my github page under projects, some may never see the light of day...</p>
-
-
-
-
-<p>Here you will also find a ton of utilities useful for rooting and managing your devices, with a main focus on the galazy nexus.  Enjoy everything that you are about to find on this site, from adb interfaces, to rooting tools, custom roms from Centaurius, and other specialized tools.</p>
-
-
-
-
-<h2 class="section-heading">The Final Call</h2>
-
-
-<p>As Shakespeare would write:</p>
-
-<blockquote>"All the world's a stage, and all the men and women merely players: they have their exits and their entrances; and one man in his time plays many parts, his acts being seven ages."</blockquote>
-
-
-<p>Now go my new children and spread the work of cool stuff and peace!</p>
-
-<p>Article by Centaurius.  Cover photo taken with many thanks from <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
-
 ]]></content>
   </entry>
   

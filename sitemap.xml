@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://centaurius.github.io/:blog/2017/02/14/brython-example.html</loc>
+<lastmod>2017-02-14T19:34:19+00:00</lastmod>
+</url>
+<url>
 <loc>http://centaurius.github.io/:blog/2017/02/13/centaurius-blog-welcome.html</loc>
 <lastmod>2017-02-13T21:59:19+00:00</lastmod>
 </url>
@@ -17,9 +21,15 @@
 <loc>http://centaurius.github.io/blog/archives/</loc>
 </url>
 <url>
-<loc>http://centaurius.github.io/blog/categories/dev/</loc>
+<loc>http://centaurius.github.io/:blog/:categories/dev/</loc>
 </url>
 <url>
-<loc>http://centaurius.github.io/blog/categories/welcome/</loc>
+<loc>http://centaurius.github.io/:blog/:categories/welcome/</loc>
+</url>
+<url>
+<loc>http://centaurius.github.io/:blog/:categories/python/</loc>
+</url>
+<url>
+<loc>http://centaurius.github.io/:blog/:categories/coding/</loc>
 </url>
 </urlset>
