@@ -10,7 +10,7 @@ published: true
 <head>
 <meta charset="iso-8859-1">
 
-<script type="text/javascript" src="../src/brython.js"></script>
+<script type="text/javascript" src="brython-3.3.1/brython.js"></script>
 
 <script type="text/python">
 import math
