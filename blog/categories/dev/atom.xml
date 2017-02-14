@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Dev, | Centaurius Blog]]></title>
+  <title><![CDATA[Category: Dev | Centaurius Blog]]></title>
   <link href="http://centaurius.github.io/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://centaurius.github.io/"/>
-  <updated>2017-02-14T14:13:30+00:00</updated>
+  <updated>2017-02-14T19:04:52+00:00</updated>
   <id>http://centaurius.github.io/</id>
   <author>
     <name><![CDATA[Hamilton Andrew White]]></name>
