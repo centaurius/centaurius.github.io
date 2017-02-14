@@ -3,7 +3,7 @@ layout: post
 title: "Centaurius Blog Welcome!"
 date: 2017-02-13 21:59:19 +0000
 comments: true
-categories: dev, welcome
+categories: [dev, welcome]
 published: true
 ---
 <h2 class="section-heading">Welcome</h2>
