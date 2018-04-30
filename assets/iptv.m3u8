@@ -1,0 +1,19 @@
+#EXTM3U
+
+#EXTINF:0 channel-id="100" epg-id="100" tvg-name="MSNBC" pay="1" channel-id="MSNBC Live" tvg-logo="http://www.msnbc.com/sites/msnbc/themes/leanforward/images/site-header/msnbc-logo-card-twitter.png"
+http://tvemsnbc-lh.akamaihd.net/i/nbcmsnbc_1@122532/master.m3u8
+
+#EXTINF:0 channel-id="101" epg-id="101" tvg-name="CBSN" pay="1" channel-id="CBS News 24/7 Live" tvg-logo="https://www.cbspressexpress.com/images/releases/docimages/8339/990679-553342/23d37f9c14ee01646ec02b8ee82dd00a.jpg"
+https://www.cbsnews.com/common/video/dai_prod.m3u8
+
+#EXTINF:0 channel-id="104" epg-id="104" tvg-name="Bloomberg Europe" pay="1" channel-id="Bloomberg Europe Live" tvg-logo="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0_rpQMGD23g/v0/-1x-1.jpg"
+https://bblive-liveprodeuwest.hs.llnwd.net/btv/desktop/eu_live.m3u8
+
+#EXTINF:0 channel-id="105" epg-id="105" tvg-name="Bloomberg US" pay="1" channel-id="Bloomberg US Live" tvg-logo="http://www.photos.apo-opa.com/plog-content/images/apo/logos/bloomberg_television.jpg"
+https://liveproduseast.global.ssl.fastly.net/btv/desktop/us_live.m3u8
+
+#EXTINF:0 channel-id="106" epg-id="106" tvg-name="Weather Nation Live" tvg-logo="https://is2-ssl.mzstatic.com/image/thumb/Purple62/v4/f7/88/2e/f7882ebf-99d8-e1c0-4e09-862db73bbbfc/mzl.cqcvfdny.png/1200x630bb.jpg"
+http://cdnapi.kaltura.com/p/931702/sp/93170200/playManifest/entryId/1_oorxcge2/format/applehttp/protocol/http/uiConfId/28428751/a.m3u8
+
+#EXTINF:0 channel-id="107" epg-id="107" tvg-name="France 24 Live" tvg-logo="http://haitiantvchannel.com/wp-content/uploads/2013/09/france24-logo-english.jpg"
+https://static.france24.com/live/F24_EN_LO_HLS/live_web.m3u8
